@@ -22,7 +22,7 @@ if (Meteor.isServer) {
       email: "test@test.com",
       password: "test"
     });
-  }
+  });
 
   Meteor.publish("choices", function() {
     return Choices.find({});
