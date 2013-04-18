@@ -1,0 +1,39 @@
+<head>
+  <title>Thunderstruck Season Ticket Poll</title>
+</head>
+
+<body>
+  <div id="banner">
+    <img src="texans.jpg"></img>
+  </div>
+  <div id="main">
+    {{loginButtons align="right"}}
+    <h5>Click a choice, then click Submit to vote</h5>
+    {{> choices}}
+    {{> submit}}
+  </div>
+</body>
+
+<template name="choices">
+  {{#each choices}}
+    <div class="choice">
+      {{choice}} - {{votes.length}} {{#if selected}}<i>(your selection)</i>{{/if}}
+    </div>
+  {{/each}}
+</template>
+
+<template name="submit">
+  <button type="button" class="btn {{#if canSubmit}}btn-primary{{/if}} {{#unless canSubmit}}btn-disabled{{/unless}} submit">Submit</button>
+  {{#unless hasUser}}
+    <div class="alert">
+      Please log in.
+    </div>
+  {{/unless}}
+  {{#if hasUser}}
+    {{#unless canVote}}
+      <div class="alert alert-success">
+        Thanks for voting!
+      </div>
+    {{/unless}}
+  {{/if}}
+</template>

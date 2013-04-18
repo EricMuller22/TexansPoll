@@ -1,0 +1,54 @@
+#login-buttons {
+  float: right;
+  margin-right: 20px;
+  margin-top: 16px;
+}
+
+#banner img {
+  width: 100%;
+  opacity: 0.4;
+  position: absolute;
+  left: 0%;
+  z-index: -1000;
+}
+
+#main {
+  position: absolute;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 16px;
+  left: 20%;
+  width: 60%;
+}
+
+.choice {
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+}
+
+.submit {
+  margin: 20px;
+  margin-left: 0px;
+}
+
+.selected {
+  color: white;
+  background-color: #4080cf;
+}
+
+.hidden {
+  display: none;
+}
+
+/* phones */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  #main {
+    left: 5%;
+    width: 85%;
+  }
+}
+
